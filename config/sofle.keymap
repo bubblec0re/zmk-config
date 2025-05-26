@@ -39,7 +39,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LT 2\space Tog3";
             #binding-cells = <0>;
-            bindings = <&lt 2 SPACE>, <&tog 3>;
+            bindings = <&lt 2 SPACE>, <&mo 3>;
         };
     };
 
