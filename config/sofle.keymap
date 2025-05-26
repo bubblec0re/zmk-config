@@ -31,6 +31,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&kp>;
+
             display-name = "Layer-Tap (hold preferred)";
             label = "Layer-Tap (hold preferred)";
         };
@@ -91,10 +92,10 @@
         raise_layer {
             display-name = "Raise";
             bindings = <
-&trans  &trans      &trans     &trans       &trans       &trans                      &mt RC(PAUSE_BREAK) PAUSE_BREAK  &trans             &trans    &trans     &kp DELETE  &kp BACKSPACE
-&trans  &kp INS     &kp PSCRN  &kp K_CMENU  &trans       &trans                      &kp PG_UP                        &kp HOME           &kp UP    &kp END    &trans      &trans
-&trans  &kp LALT    &kp LCTRL  &kp LSHFT    &trans       &kp CLCK                    &kp PG_DN                        &kp LEFT           &kp DOWN  &kp RIGHT  &trans      &trans
-&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans    &trans    &trans  &trans                           &kp RIGHT_BRACKET  &trans    &trans     &trans      &trans
+&trans  &trans      &trans     &trans       &trans       &trans                      &mt RC(PAUSE_BREAK) PAUSE_BREAK  &trans             &trans    &trans     &mt RS(DELETE) DELETE  &kp BACKSPACE
+&trans  &kp INS     &kp PSCRN  &kp K_CMENU  &trans       &trans                      &kp PG_UP                        &kp HOME           &kp UP    &kp END    &trans                 &trans
+&trans  &kp LALT    &kp LCTRL  &kp LSHFT    &trans       &kp CLCK                    &kp PG_DN                        &kp LEFT           &kp DOWN  &kp RIGHT  &trans                 &trans
+&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans    &trans    &trans  &trans                           &kp RIGHT_BRACKET  &trans    &trans     &trans                 &trans
                     &trans     &trans       &trans       &trans    &trans    &trans  &trans                           &trans             &trans    &trans
             >;
 
@@ -116,10 +117,10 @@
 
         num_layer {
             bindings = <
-&trans  &trans  &trans     &mt RC(KP_DIVIDE) KP_DIVIDE  &kp KP_MULTIPLY  &mt RC(KP_MINUS) KP_MINUS                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp KP_N7  &kp KP_NUMBER_8              &kp KP_NUMBER_9  &mt RC(KP_PLUS) KP_PLUS                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp KP_N4  &kp KP_NUMBER_5              &kp KP_NUMBER_6  &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp KP_N1  &kp KP_N2                    &kp KP_NUMBER_3  &trans                     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans               &mt RC(KP_DIVIDE) KP_DIVIDE  &kp KP_MULTIPLY  &mt RC(KP_MINUS) KP_MINUS                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp KP_N7            &kp KP_NUMBER_8              &kp KP_NUMBER_9  &mt RC(KP_PLUS) KP_PLUS                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp KP_N4            &kp KP_NUMBER_5              &kp KP_NUMBER_6  &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp KP_N1            &kp KP_N2                    &kp KP_NUMBER_3  &trans                     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &mt RC(KP_N0) KP_N0  &trans                       &trans           &trans                     &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
