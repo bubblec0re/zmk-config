@@ -133,7 +133,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - DELETE
+  - {t: DELETE, h: Sft+DELETE}
   - BACKSPACE
   - {t: ▽, type: trans}
   - INS
