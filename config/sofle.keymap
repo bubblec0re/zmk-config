@@ -30,7 +30,6 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&kp>;
-
             display-name = "Layer-Tap (hold preferred)";
             label = "Layer-Tap (hold preferred)";
         };
@@ -40,6 +39,7 @@
             label = "LT 2\space Tog3";
             #binding-cells = <0>;
             bindings = <&lt 2 SPACE>, <&mo 3>;
+            quick-tap-ms = 150;
         };
     };
 
