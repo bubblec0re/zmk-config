@@ -249,7 +249,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: KP DIVIDE, h: Ctl+KP DIVIDE}
-  - KP MULTIPLY
+  - {t: KP MULTIPLY, h: Ctl+KP MULTIPLY}
   - {t: KP MINUS, h: Ctl+KP MINUS}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
