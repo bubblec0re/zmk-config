@@ -54,8 +54,8 @@ layers:
   - LGUI
   - LALT
   - LCTRL
-  - '&lt1_space_mo4'
-  - RET
+  - {t: SPACE, h: Lower}
+  - {t: ENTER, h: Numbers}
   - ENTER
   - {t: SPACE, h: Raise}
   - RCTRL
@@ -115,7 +115,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -237,7 +237,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {type: held}
   - ''
   - ''
   - {type: held}
@@ -245,7 +245,7 @@ layers:
   - ''
   - ''
   Numbers:
-  - {t: ▽, type: trans}
+  - CALC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: KP DIVIDE, h: Ctl+KP DIVIDE}
@@ -257,7 +257,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - AL CALC
   - {t: ▽, type: trans}
   - KP 7
   - KP 8
@@ -299,7 +299,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
