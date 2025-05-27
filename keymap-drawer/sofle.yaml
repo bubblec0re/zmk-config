@@ -74,12 +74,12 @@ layers:
   - F9
   - F10
   - F11
-  - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
+  - {t: ▽, type: trans}
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
   - '6'
   - '7'
   - '8'
@@ -90,8 +90,8 @@ layers:
   - +
   - _
   - '#'
-  - $
-  - '%'
+  - F11
+  - F12
   - ^
   - '&'
   - '*'
@@ -245,7 +245,7 @@ layers:
   - ''
   - ''
   Numbers:
-  - CALC
+  - AL CALCULATOR
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: KP DIVIDE, h: Ctl+KP DIVIDE}
@@ -257,7 +257,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - AL CALC
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - KP 7
   - KP 8
