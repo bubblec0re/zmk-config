@@ -4,13 +4,13 @@ on:
   push:
     paths-ignore:
       - 'keymap-drawer*'
-      - 'draw-keymaps.yml'
-      - 'svg_to_png.yml'
+      - '.github/workflows/draw-keymaps.yml'
+      - '.github/workflows/svg_to_png.yml'
   pull_request:
     paths-ignore:
       - 'keymap-drawer*'
-      - 'draw-keymaps.yml'
-      - 'svg_to_png.yml'
+      - '.github/workflows/draw-keymaps.yml'
+      - '.github/workflows/svg_to_png.yml'
   workflow_dispatch:
 
 jobs:
