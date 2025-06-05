@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'keymap-drawer/*.svg' # Trigger on SVG changes in the keymap-drawer folder
+      - '.github/workflows/svg_to_png.yml' # trigger on changes in conversion settings
   workflow_dispatch: # Allow manual triggering of the workflow
 
 jobs:
@@ -16,19 +17,24 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Install ImageMagick
         run: |
           sudo apt-get update
           sudo apt-get install -y imagemagick
 
+      # 2480 x 3508 at 300 PPI to print on an A4 paper
       - name: Convert SVG to PNG
         run: |
           for svg_file in keymap-drawer/*.svg; do
             png_file="${svg_file%.svg}.png"  # Replace .svg with .png
-            convert "$svg_file" "$png_file"
+            convert -background none "$svg_file" "$png_file"
             echo "Converted $svg_file to $png_file"
           done
 
       - name: Commit updated images
         uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Converted SVG keymaps to PNG
