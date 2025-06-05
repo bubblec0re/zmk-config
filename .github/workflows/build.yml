@@ -1,5 +1,17 @@
 name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
+
+on:
+  push:
+    paths-ignore:
+      - 'keymap-drawer*'
+      - 'draw-keymaps.yml'
+      - 'svg_to_png.yml'
+  pull_request:
+    paths-ignore:
+      - 'keymap-drawer*'
+      - 'draw-keymaps.yml'
+      - 'svg_to_png.yml'
+  workflow_dispatch:
 
 jobs:
   build:
