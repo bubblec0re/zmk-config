@@ -30,7 +30,7 @@ jobs:
         run: |
           for svg_file in keymap-drawer/*.svg; do
             png_file="${svg_file%.svg}.png"  # Replace .svg with .png
-            convert -background none "$svg_file" "$png_file"
+            convert -background white "$svg_file" "$png_file"
             echo "Converted $svg_file to $png_file"
           done
 
