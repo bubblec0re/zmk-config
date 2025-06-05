@@ -29,8 +29,6 @@ jobs:
 
       - name: Commit Changes (if any files were changed)
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name " Convert SVGs to PNGs"
           git add keymap-drawer/*.png
           git commit -m "[Convert] Update PNG keymaps"
           git push
