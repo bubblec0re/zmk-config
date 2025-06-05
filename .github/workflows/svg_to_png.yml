@@ -7,8 +7,11 @@ on:
   workflow_dispatch: # Allow manual triggering of the workflow
 
 jobs:
+  
   convert:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Allow workflow to commit to the repo
 
     steps:
       - name: Checkout Repository
@@ -28,7 +31,4 @@ jobs:
           done
 
       - name: Commit Changes (if any files were changed)
-        run: |
-          git add keymap-drawer/*.png
-          git commit -m "[Convert] Update PNG keymaps"
-          git push
+	 	    uses: stefanzweifel/git-auto-commit-action@v5
