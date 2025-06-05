@@ -1,0 +1,36 @@
+name: Convert Keymaps to PNG
+
+on:
+  push:
+    paths:
+      - 'keymap-drawer/*.svg' # Trigger on SVG changes in the keymap-drawer folder
+  workflow_dispatch: # Allow manual triggering of the workflow
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Convert SVG to PNG
+        run: |
+          for svg_file in keymap-drawer/*.svg; do
+            png_file="${svg_file%.svg}.png"  # Replace .svg with .png
+            convert "$svg_file" "$png_file"
+            echo "Converted $svg_file to $png_file"
+          done
+
+      - name: Commit Changes (if any files were changed)
+        run: |
+          # git config --local user.email "actions@github.com"
+          # git config --local user.name "GitHub Actions"
+          git add keymap-drawer/*.png
+          git commit -m "[Convert] Update PNG keymaps"
+          git push
