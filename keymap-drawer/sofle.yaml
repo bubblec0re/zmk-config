@@ -55,7 +55,7 @@ layers:
   - LALT
   - LCTRL
   - {t: SPACE, h: Lower}
-  - {t: ENTER, h: Numbers}
+  - {t: ENTER, h: Numpad}
   - ENTER
   - {t: SPACE, h: Raise}
   - RCTRL
@@ -130,14 +130,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: PAUSE BREAK, h: Ctl+PAUSE BREAK}
-  - {t: ▽, type: trans}
+  - PRINTSCREEN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: DELETE, h: Sft+DELETE}
   - BACKSPACE
   - {t: ▽, type: trans}
   - INS
-  - PSCRN
+  - {t: ▽, type: trans}
   - CMENU
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -152,7 +152,7 @@ layers:
   - LCTRL
   - LSHFT
   - {t: ▽, type: trans}
-  - CLCK
+  - CAPSLOCK
   - PG DN
   - LEFT
   - DOWN
@@ -244,7 +244,7 @@ layers:
   - ''
   - ''
   - ''
-  Numbers:
+  Numpad:
   - AL CALCULATOR
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -274,7 +274,7 @@ layers:
   - KP 4
   - KP 5
   - KP 6
-  - {t: ▽, type: trans}
+  - BACKSPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
