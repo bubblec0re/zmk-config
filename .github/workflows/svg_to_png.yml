@@ -31,7 +31,7 @@ jobs:
         run: |
           for svg_file in keymap-drawer/*.svg; do
             png_file="${svg_file%.svg}.png"  # Replace .svg with .png
-            inkscape --export-type png --export-filename "$png_file" --export-dpi 300 --export-background=white "$svg_file"
+            inkscape --export-type png --export-filename "$png_file" --export-dpi 300 "$svg_file" # --export-background=white
             echo "Converted $svg_file to $png_file"
           done
 
