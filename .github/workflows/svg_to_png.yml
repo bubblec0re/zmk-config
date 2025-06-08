@@ -23,14 +23,17 @@ jobs:
       - name: Install ImageMagick
         run: |
           sudo apt-get update
-          sudo apt-get install -y imagemagick
+          # sudo apt-get install -y imagemagick
+          sudo apt-get install -y inkscape
+          
 
       # 2480 x 3508 at 300 PPI to print on an A4 paper
       - name: Convert SVG to PNG
         run: |
           for svg_file in keymap-drawer/*.svg; do
             png_file="${svg_file%.svg}.png"  # Replace .svg with .png
-            convert -background white "$svg_file" "$png_file"
+            # convert -background white "$svg_file" "$png_file"
+            inkscape --export-type png --export-filename "$png_file" --export-dpi 300 --export-background=white "$svg_file"
             echo "Converted $svg_file to $png_file"
           done
 
