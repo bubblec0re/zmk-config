@@ -20,10 +20,9 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Install ImageMagick
+      - name: Install Inkscape
         run: |
           sudo apt-get update
-          # sudo apt-get install -y imagemagick
           sudo apt-get install -y inkscape
           
 
@@ -32,7 +31,6 @@ jobs:
         run: |
           for svg_file in keymap-drawer/*.svg; do
             png_file="${svg_file%.svg}.png"  # Replace .svg with .png
-            # convert -background white "$svg_file" "$png_file"
             inkscape --export-type png --export-filename "$png_file" --export-dpi 300 --export-background=white "$svg_file"
             echo "Converted $svg_file to $png_file"
           done
