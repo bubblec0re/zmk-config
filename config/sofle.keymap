@@ -68,6 +68,15 @@
         };
     };
 
+    macros {
+        shrug: shrug {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BSLH &kp UNDER &kp LPAR &kp RPAR &kp UNDER &kp FSLH>;
+            label = "SHRUG";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -104,7 +113,7 @@
         raise_layer {
             display-name = "Raise";
             bindings = <
-&trans  &trans      &trans     &trans       &trans       &trans                          &mt RC(PAUSE_BREAK) PAUSE_BREAK  &kp PRINTSCREEN  &trans            &trans      &mt RS(DELETE) DELETE  &kp BACKSPACE
+&trans  &trans      &trans     &trans       &trans       &trans                          &mt RC(PAUSE_BREAK) PAUSE_BREAK  &kp PRINTSCREEN  &shrug            &trans      &mt RS(DELETE) DELETE  &kp BACKSPACE
 &trans  &kp INS     &trans     &kp K_CMENU  &trans       &trans                          &kp PG_UP                        &kp HOME         &kp UP            &kp END     &trans                 &trans
 &trans  &kp LALT    &kp LCTRL  &kp LSHFT    &trans       &kp CAPSLOCK                    &kp PG_DN                        &kp LEFT         &kp DOWN          &kp RIGHT   &trans                 &trans
 &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans        &trans    &trans  &trans                           &kp C_PREV       &kp C_PLAY_PAUSE  &kp C_NEXT  &trans                 &trans
