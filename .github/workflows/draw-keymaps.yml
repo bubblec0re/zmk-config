@@ -28,6 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write  # Allow workflow to commit to the repo
+    needs: draw
 
     steps:
       - name: Checkout Repository
