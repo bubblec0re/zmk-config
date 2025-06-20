@@ -131,7 +131,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: PAUSE BREAK, h: Ctl+PAUSE BREAK}
   - PRINTSCREEN
-  - '&shrug'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: DELETE, h: Sft+DELETE}
   - BACKSPACE
