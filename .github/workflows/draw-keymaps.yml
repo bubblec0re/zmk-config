@@ -10,6 +10,7 @@ on:
       # - 'boards/*/*/*.keymap'
 
 jobs:
+ 
   draw:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
@@ -22,3 +23,34 @@ jobs:
       draw_args: ""   # map of extra args to pass to `keymap draw`, e.g. "corne:'-k corne_rotated' cradio:'-k paroxysm'"
       # Use the triggering commit's message, prepending the "[Draw]" tag
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
+  
+  convert:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Allow workflow to commit to the repo
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Install Inkscape
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y inkscape
+          
+
+      # 2480 x 3508 at 300 PPI to print on an A4 paper
+      - name: Convert SVG to PNG
+        run: |
+          for svg_file in keymap-drawer/*.svg; do
+            png_file="${svg_file%.svg}.png"  # Replace .svg with .png
+            inkscape --export-type png --export-filename "$png_file" --export-dpi 300 "$svg_file" # --export-background=white
+            echo "Converted $svg_file to $png_file"
+          done
+
+      - name: Commit updated images
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Converted SVG keymaps to PNG
