@@ -62,7 +62,7 @@ layers:
   - RALT
   - RGUI
   Lower:
-  - '&lang_switch'
+  - CAPSLOCK
   - F1
   - F2
   - F3
