@@ -43,8 +43,8 @@ layers:
   - C
   - V
   - B
-  - MUTE
   - RGB TOG
+  - MUTE
   - N
   - {t: M, h: ']'}
   - ','
