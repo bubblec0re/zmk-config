@@ -122,7 +122,7 @@
         num_layer {
             bindings = <
 &kp C_AL_CALCULATOR  &trans      &trans               &mt RC(KP_DIVIDE) KP_DIVIDE  &mt RC(KP_MULTIPLY) KP_MULTIPLY  &mt RC(KP_MINUS) KP_MINUS                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans               &trans      &kp KP_N7            &kp KP_NUMBER_8              &kp KP_NUMBER_9                  &mt RC(KP_PLUS) KP_PLUS                      &trans  &trans  &trans  &trans  &trans  &trans
+&kp KP_NUMLOCK       &trans      &kp KP_N7            &kp KP_NUMBER_8              &kp KP_NUMBER_9                  &mt RC(KP_PLUS) KP_PLUS                      &trans  &trans  &trans  &trans  &trans  &trans
 &trans               &trans      &kp KP_N4            &kp KP_NUMBER_5              &kp KP_NUMBER_6                  &kp BACKSPACE                                &trans  &trans  &trans  &trans  &trans  &trans
 &trans               &kp KP_DOT  &kp KP_N1            &kp KP_N2                    &kp KP_NUMBER_3                  &trans                     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                  &mt RC(KP_N0) KP_N0  &trans                       &trans                           &trans                     &trans    &trans  &trans  &trans  &trans  &trans
