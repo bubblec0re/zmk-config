@@ -8,7 +8,7 @@
 / {
     /* Define a dummy LED strip */
     dummy_led_strip: dummy_led_strip {
-        compatible = "zmk,mock-led-strip";
+        compatible = "zmk,underglow";
         chain-length = <0>;
     };
 };
