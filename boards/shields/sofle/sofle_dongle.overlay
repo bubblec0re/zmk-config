@@ -6,9 +6,19 @@
 };
 
 / {
+    /* Define a dummy LED strip */
+    dummy_led_strip: dummy_led_strip {
+        compatible = "zmk,mock-led-strip";
+        chain-length = <0>;
+    };
+};
+
+
+/ {
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &josefadamcik_sofle_layout;
+        zmk,underglow = &dummy_led_strip;
     };
 
     mock_kscan: mock_kscan_0 {
