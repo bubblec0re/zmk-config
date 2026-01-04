@@ -9,7 +9,6 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &josefadamcik_sofle_layout;
-        zmk,underglow = &dummy_led_strip;
     };
 
     mock_kscan: mock_kscan_0 {
