@@ -306,5 +306,5 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [6, 54, 55]
+- p: [6, 53, 56]
   k: '&bootloader'
