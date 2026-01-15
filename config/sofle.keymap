@@ -43,7 +43,7 @@
             label = "TD LT 1\Space, Mo4";
             display-name = "TD LT1\Space, Mo4";
             #binding-cells = <0>;
-            bindings = <&lt_hp 1 SPACE>, <&mo NUMBERS>;
+            bindings = <&lt_hp 1 SPACE>, <&mo 4>;
         };
 
         mt_hp: mt_hp {
@@ -138,16 +138,6 @@
             >;
 
             label = "Numpad";
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-            >;
         };
     };
 };
