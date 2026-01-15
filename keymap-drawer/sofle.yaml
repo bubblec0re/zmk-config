@@ -190,7 +190,7 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - '&bootloader'
+  - ''
   - ''
   - ''
   - ''
@@ -305,3 +305,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [56, 6, 53]
+  k: '&bootloader'
