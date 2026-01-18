@@ -2,7 +2,8 @@
 #include <layouts/josefadamcik/sofle.dtsi>
 #include <dt-bindings/led/led.h>
 
-// this section is a fake RGB underglow on the dongle for the real underglow on the halves
+// this section is a fake RGB underglow on the dongle
+// it's needed for the real underglow to work on the halves
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
@@ -40,6 +41,7 @@
                          LED_COLOR_ID_BLUE>;
     };
 };
+
 
 &josefadamcik_sofle_layout {
     transform = <&default_transform>;
@@ -79,7 +81,8 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
     };
 
 
-    // these encoders are fake, they're needed to make the real encoders work
+    // this section defines fake encoders on the dongle
+    // it's needed for the encoders on the halves
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "LEFT_ENCODER";
